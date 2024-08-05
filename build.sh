@@ -18,7 +18,8 @@ chisel cut --release $CHISEL_RELEASES_LOCATION \
 	libexif12_libs \
 	libgif7_libs \
 	libpixman-1-0_libs \
-	libfontconfig1_libs
+	libfontconfig1_libs \
+	libxcb1_libs
 
 
 cp /usr/bin/ldd $CHISELED_ROOTFS/usr/bin
