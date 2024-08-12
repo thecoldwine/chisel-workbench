@@ -10,19 +10,9 @@ rm -rf $CHISELED_ROOTFS/*
 
 chisel cut --release $CHISEL_RELEASES_LOCATION \
 	--root $CHISELED_ROOTFS \
-	libc6_libs \
-	ca-certificates_data \
-	bash_bins \
-	base-files_base \
-	coreutils_bins \
-	libexif12_libs \
-	libgif7_libs \
-	libpixman-1-0_libs \
-	libfontconfig1_libs \
-	libxcb1_libs
+	libgdiplus_libs
 
 
 cp /usr/bin/ldd $CHISELED_ROOTFS/usr/bin
-
 mkdir $CHISELED_ROOTFS/dev
 touch $CHISELED_ROOTFS/dev/null
