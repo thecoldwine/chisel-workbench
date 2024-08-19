@@ -8,11 +8,17 @@ echo "Cleaning up old filesystem"
 rm -rf $CHISELED_ROOTFS/*
 
 
-chisel cut --release $CHISEL_RELEASES_LOCATION \
-	--root $CHISELED_ROOTFS \
-	libgdiplus_libs
+ chisel cut --release $CHISEL_RELEASES_LOCATION \
+ 	--root $CHISELED_ROOTFS \
+ 	bash_bins \
+ 	coreutils_bins \
+ 	findutils_bins \
+         liblerc4_libs \
+ 	libgdiplus_libs
+#chisel cut --release $CHISEL_RELEASES_LOCATION \
+#	--root $CHISELED_ROOTFS \
+#	libgdiplus_libs
 
 
-cp /usr/bin/ldd $CHISELED_ROOTFS/usr/bin
-mkdir $CHISELED_ROOTFS/dev
-touch $CHISELED_ROOTFS/dev/null
+#mkdir $CHISELED_ROOTFS/dev
+#touch $CHISELED_ROOTFS/dev/null
